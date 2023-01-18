@@ -11,6 +11,17 @@ body {
 }
 
 .kfu-card{
-    color: white;
-    background: linear-gradient(243.16deg,rgba(25,86,99,.54) 69.1%,rgba(11,111,119,.54) 69.11%,rgba(25,86,99,.54) 103.29%),linear-gradient(119.17deg,#195663 22.48%,#0b6f77 22.49%,#195663 85.5%);
+    color: black;
+    background: linear-gradient(243.16deg, rgba(255, 255, 255, 0.85) 69.1%, rgba(6, 115, 134, 0.54) 69.11%, rgba(31, 103, 126, 0.54) 103.29%),linear-gradient(119.17deg, #234449 22.48%,#0b6f77 22.49%,#195663 85.5%);
 }
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }

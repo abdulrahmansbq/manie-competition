@@ -13,4 +13,7 @@ class ShowQueue extends Component
         $this->clubs = User::query()->where('rank', '!=', 0)->orderBy('rank')->get();
         return view('livewire.show-queue');
     }
+    public function zeros(){
+        User::query()->update(['rank' => 0]);
+    }
 }
