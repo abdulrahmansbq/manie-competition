@@ -2,7 +2,7 @@
     <h1>إضغط هنا</h1>
     @push('scripts')
         <script>
-            $('body').on('click',() => {
+            $('#main-container').on('click',() => {
                 Livewire.emit('pushToQueue')
             });
         </script>

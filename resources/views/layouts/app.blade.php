@@ -17,7 +17,31 @@
         @livewireStyles
     </head>
     <body class="bg-primary-subtle">
-        <div  class="container p-4">
+        <header class="p-3 text-bg-dark">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                    <ul class="nav me-lg-auto mb-2 justify-content-center mb-md-0">
+                        @hasrole('participant')
+                            <li><a href="{{ route('dashboard') }}" class="nav-link px-2 {{ request()->routeIs('dashboard') ? 'text-secondary' : 'text-white' }}">المشاركين</a></li>
+                        @endhasrole
+                        @hasrole('presenter')
+                            <li><a href="{{ route('queue') }}" class="nav-link px-2 {{ request()->routeIs('queue') ? 'text-secondary' : 'text-white' }}">الطلبات</a></li>
+                        @endhasrole
+                        @hasrole('presenter|viewer')
+                            <li><a href="#" class="nav-link px-2 text-white">الترتيبات</a></li>
+                        @endhasrole
+                    </ul>
+                    <form method="POST" action="{{ route('logout') }}" class="end-">
+                        @csrf
+
+                        <button type="submit" class="btn btn-sm btn-warning">
+                            تسجيل الخروج
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <div  class="container p-4" id="main-container">
             <main>
                 {{ $slot }}
             </main>
