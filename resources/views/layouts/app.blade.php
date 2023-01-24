@@ -28,7 +28,7 @@
                             <li><a href="{{ route('queue') }}" class="nav-link px-2 {{ request()->routeIs('queue') ? 'text-secondary' : 'text-white' }}">الطلبات</a></li>
                         @endhasrole
                         @hasrole('presenter|viewer')
-                            <li><a href="#" class="nav-link px-2 text-white">الترتيبات</a></li>
+                            <li><a href="{{ route('leaderboard') }}" class="nav-link px-2 text-white">الترتيبات</a></li>
                         @endhasrole
                     </ul>
                     <form method="POST" action="{{ route('logout') }}" class="end-">
