@@ -11,7 +11,7 @@ class Leaderboard extends Component
     {
         $ranks = User::query()->whereHas("roles", function($q) {
             $q->where("name", 'participant');
-        })->orderByDesc('rank')->get();
+        })->orderByDesc('points')->get();
         return view('livewire.leaderboard', compact('ranks'));
     }
 }
