@@ -27,34 +27,58 @@ class UserSeeder extends Seeder
             'password' => Hash::make('viewer1234')
         ])->assignRole('viewer');
         User::create([
-            'name' => 'نادي قوقل للطلبة المطورين',
-            'email' => 'gdsc@manie.kfu',
-            'password' => Hash::make('1234')
+            'name' => 'نادي راديوس القانوني',
+            'avatar' => '1',
+            'email' => 'radios@manie.kfu',
+            'password' => Hash::make('rdi111')
         ])->assignRole('participant');
         User::create([
-            'name' => 'نادي هواوي',
-            'email' => 'huawei@manie.kfu',
-            'password' => Hash::make('1234')
+            'name' => 'نادي IEEE',
+            'email' => 'ieee@manie.kfu',
+            'avatar' => '2',
+            'password' => Hash::make('ieee121')
         ])->assignRole('participant');
         User::create([
-            'name' => 'فريق كفو التطوعي',
-            'email' => 'kfu@manie.kfu',
-            'password' => Hash::make('1234')
+            'name' => 'نادي همة',
+            'email' => 'himah@manie.kfu',
+            'avatar' => '3',
+            'password' => Hash::make('hi122')
+        ])->assignRole('participant');
+        User::create([
+            'name' => 'نادي ترحال',
+            'email' => 'trhal@manie.kfu',
+            'avatar' => '4',
+            'password' => Hash::make('trhal131')
         ])->assignRole('participant');
         User::create([
             'name' => 'نادي أديب',
-            'email' => 'adeb@manie.kfu',
-            'password' => Hash::make('1234')
+            'email' => 'adeeb@manie.kfu',
+            'avatar' => '5',
+            'password' => Hash::make('adeeb1212')
         ])->assignRole('participant');
         User::create([
-            'name' => 'نادي المحاسبة',
-            'email' => 'calculator@manie.kfu',
-            'password' => Hash::make('1234')
+            'name' => 'نادي كفو',
+            'email' => 'kfu@manie.kfu',
+            'avatar' => '6',
+            'password' => Hash::make('kfu141')
+        ])->assignRole('participant');
+        User::create([
+            'name' => 'نادي قوقل للطلبة المطورين',
+            'email' => 'gdsc@manie.kfu',
+            'avatar' => '7',
+            'password' => Hash::make('gdsc151')
+        ])->assignRole('participant');
+        User::create([
+            'name' => 'نادي هواوي',
+            'email' => 'hsd@manie.kfu',
+            'avatar' => '8',
+            'password' => Hash::make('hsd199')
         ])->assignRole('participant');
         User::create([
             'name' => 'نادي الإعلام',
             'email' => 'media@manie.kfu',
-            'password' => Hash::make('1234')
+            'avatar' => '9',
+            'password' => Hash::make('med822')
         ])->assignRole('participant');
     }
 }

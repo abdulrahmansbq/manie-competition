@@ -16,7 +16,7 @@ class QueueHandler extends Component
     }
 
     public function pushToQueue(){
-        if(!auth()->user()->rank){
+        if(!auth()->user()->rank && auth()->user()->hasRole('participant')){
             $lastRank = User::select('rank')->orderByDesc('rank')->first()['rank'];
             ++$lastRank;
             auth()->user()->update(['rank' => $lastRank]);

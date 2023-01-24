@@ -10,16 +10,9 @@
 </head>
 <body>
 
-<example-component></example-component>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js'></script>
 <script src='{{ asset('build/assets/app-80d7076c.js') }}'></script>
 
 </body>
 </html>
-<script>
-    import ExampleComponent from "../../js/components/ExampleComponent";
-    export default {
-        components: {ExampleComponent}
-    }
-</script>
