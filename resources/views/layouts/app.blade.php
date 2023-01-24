@@ -24,7 +24,7 @@
                         @hasrole('participant')
                             <li><a href="{{ route('dashboard') }}" class="nav-link px-2 {{ request()->routeIs('dashboard') ? 'text-secondary' : 'text-white' }}">المشاركين</a></li>
                         @endhasrole
-                        @hasrole('presenter')
+                        @hasrole('presenter|viewer')
                             <li><a href="{{ route('queue') }}" class="nav-link px-2 {{ request()->routeIs('queue') ? 'text-secondary' : 'text-white' }}">الطلبات</a></li>
                         @endhasrole
                         @hasrole('presenter|viewer')
