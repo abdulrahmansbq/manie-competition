@@ -25,7 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/queue', ShowQueue::class)->middleware(['auth', 'role:presenter|viewer'])->name('queue');
-Route::get('/leaderboard', ShowQueue::class)->middleware(['auth', 'role:presenter|viewer'])->name('leaderboard');
+Route::get('/leaderboard', fn() => view('leaderboard.index'))->middleware(['auth', 'role:presenter|viewer'])->name('leaderboard');
 Route::get('/queue/{club}', HandleClub::class)->middleware(['auth', 'role:presenter'])->name('club');
 
 Route::middleware('auth')->group(function () {
